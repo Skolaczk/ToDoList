@@ -7,6 +7,16 @@ export const StyledListItem = styled.div`
   padding: 20px 0;
   position: relative;
 
+  @media (max-width: 560px) {
+    width: 350px;
+  }
+  @media (max-width: 460px) {
+    width: 300px;
+  }
+  @media (max-width: 360px) {
+    width: 250px;
+  }
+
   &:not(:last-child)::after {
     content: '';
     position: absolute;

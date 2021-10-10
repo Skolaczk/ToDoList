@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from 'components/atoms/Button/Button';
+import DeleteButton from 'components/atoms/Button/DeleteButton';
 import { StyledListItem } from 'components/molecules/TaskListItem/TaskListItem.style';
 
-const TaskListItem = ({ deleteTask, userData: { id, title } }) => (
-  <StyledListItem key={id}>
+const TaskListItem = ({ deleteTask, userData: { title } }) => (
+  <StyledListItem>
     <h2>{title}</h2>
-    <Button onClick={() => deleteTask(title)} />
+    <DeleteButton onClick={() => deleteTask(title)} />
   </StyledListItem>
 );
 
