@@ -5,7 +5,8 @@ import { theme } from 'assets/styles/theme';
 import { ThemeProvider } from 'styled-components';
 import List from 'components/templates/List/List';
 import Form from 'components/templates/Form/Form';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navigation from 'components/organisms/Navigation/Navigation';
 
 const initialFormState = {
   title: '',
@@ -39,10 +40,7 @@ const Root = () => {
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/add-task">Add task</Link>
-        </nav>
+        <Navigation />
         <Switch>
           <Route path="/add-task">
             <Form
