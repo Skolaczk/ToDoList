@@ -7,7 +7,11 @@ export const StyledButton = styled.button`
   height: 30px;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.gray};
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+  }
 `;

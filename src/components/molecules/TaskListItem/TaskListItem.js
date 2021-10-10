@@ -1,5 +1,5 @@
 import React from 'react';
-import DeleteButton from 'components/atoms/Button/DeleteButton';
+import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
 import { StyledListItem } from 'components/molecules/TaskListItem/TaskListItem.style';
 
 const TaskListItem = ({ deleteTask, taskData: { title } }) => (
