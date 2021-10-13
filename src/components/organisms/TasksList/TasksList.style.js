@@ -6,7 +6,27 @@ export const Wrapper = styled.div`
   padding: 50px;
   margin: 10px 0;
 
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      margin-right: 5px;
+    }
+
+    button {
+      margin-left: 5px;
+    }
+  }
+
   @media (max-width: 460px) {
     padding: 25px;
+  }
+
+  @media (max-width: 360px) {
+    h1 {
+      font-size: 26px;
+    }
   }
 `;
