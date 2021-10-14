@@ -8,4 +8,8 @@ export const Button = styled.button`
   border: none;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkGrey};
+  display: ${({ value }) => {
+    if (value === 0) return 'none';
+    return 'block';
+  }};
 `;

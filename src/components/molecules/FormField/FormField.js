@@ -12,6 +12,7 @@ const FormField = ({ onChange, value, label, name, id, type = 'text' }) => (
       value={value}
       onChange={onChange}
       required
+      autoComplete="off"
     />
   </div>
 );

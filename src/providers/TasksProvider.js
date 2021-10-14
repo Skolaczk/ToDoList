@@ -10,8 +10,8 @@ export const TasksContext = React.createContext({
 const TasksProvider = ({ children }) => {
   const [tasks, setTasks] = useState(taskData);
 
-  const deleteTask = (title) => {
-    const filteredTasks = tasks.filter((task) => task.title !== title);
+  const deleteTask = (id) => {
+    const filteredTasks = tasks.filter((task) => task.id !== id);
     setTasks(filteredTasks);
   };
 
@@ -19,6 +19,7 @@ const TasksProvider = ({ children }) => {
 
   const handleAddTask = (value) => {
     const newTask = {
+      id: Math.floor(Math.random() * (10000 - 10)) + 10,
       title: value.title,
     };
 
