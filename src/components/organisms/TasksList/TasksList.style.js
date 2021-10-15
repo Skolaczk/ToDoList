@@ -7,11 +7,6 @@ export const Wrapper = styled.div`
   margin: 10px 0;
   box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
 
-  input {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
   .box {
     display: flex;
     justify-content: space-between;

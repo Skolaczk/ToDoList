@@ -29,7 +29,7 @@ const Form = () => {
   return (
     <Container>
       <Wrapper as="form" onSubmit={handleSubmitTask}>
-        <h1>Add a task</h1>
+        <h2>Add a task</h2>
         <FormField
           label="Task name"
           id="name"

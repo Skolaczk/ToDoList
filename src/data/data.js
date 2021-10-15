@@ -17,10 +17,6 @@ export const data = [
   },
   {
     id: 5,
-    title: 'Odrób pracę domową',
-  },
-  {
-    id: 6,
     title: 'Przeczytaj książkę',
   },
 ];

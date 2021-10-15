@@ -7,7 +7,7 @@ const FormField = ({ onChange, value, label, name, id, type = 'text' }) => (
     <Label htmlFor={id}>{label}</Label>
     <Input
       name={name}
-      id={type}
+      id={name}
       type={type}
       value={value}
       onChange={onChange}
