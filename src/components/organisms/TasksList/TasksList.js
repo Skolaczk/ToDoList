@@ -32,7 +32,7 @@ const TasksList = () => {
           <DeleteAllButton />
         </div>
         <SearchBar
-          label="Search a title of task"
+          label="Search a task"
           id="name"
           name="name"
           onChange={handleChange}

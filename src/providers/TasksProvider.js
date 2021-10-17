@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { data as taskData } from 'data/data';
 
 export const TasksContext = React.createContext({
@@ -9,6 +9,18 @@ export const TasksContext = React.createContext({
 
 const TasksProvider = ({ children }) => {
   const [tasks, setTasks] = useState(taskData);
+
+  useEffect(() => {
+    const getTasks = JSON.parse(localStorage.getItem('tasks'));
+
+    if (getTasks) {
+      setTasks(getTasks);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   const deleteTask = (id) => {
     const filteredTasks = tasks.filter((task) => task.id !== id);
